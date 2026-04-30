@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("RE-HI Tool")
+st.title("RE-Excel Sheet Converter")
 
 file = st.file_uploader("Upload Excel or CSV", type=["xlsx","xls","csv"])
 
