@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title("RE-Excel Sheet Converter")
+st.subheader("Upload and convert Excel data")
 
 file = st.file_uploader("Upload Excel or CSV", type=["xlsx","xls","csv"])
 
