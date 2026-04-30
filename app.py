@@ -8,7 +8,7 @@ EXPECTED_GOLDEN = 159
 
 # ---------- UI ----------
 st.title("RE-Excel Sheet Converter")
-st.subheader("Convert Type 1 Excel into structured statement-score data")
+st.subheader("Convert HI Excel into structured statement-score data")
 
 # ---------- HELPERS ----------
 def is_numeric(x):
