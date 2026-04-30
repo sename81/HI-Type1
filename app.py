@@ -131,11 +131,16 @@ if file:
     col2.metric("Raw rows", total_rows)
     col3.metric("Usable pairs", len(df))
 
-    # Golden check
+    # Golden check (STRICT)
     if len(df) == EXPECTED_GOLDEN:
         st.success(f"✅ GOLDEN: {EXPECTED_GOLDEN} rows")
     else:
-        st.warning(f"{len(df)} rows (Expected {EXPECTED_GOLDEN})")
+        st.warning("⚠ This file does not match the standard format.")
+        st.error(
+            f"❌ NOT GOLDEN: Parsed {len(df)} rows, expected {EXPECTED_GOLDEN}.\n\n"
+            "Please re-upload the original Excel file (not CSV) and ensure no rows are missing or altered."
+        )
+        st.stop()
 
     # Repairs info
     if repairs:
